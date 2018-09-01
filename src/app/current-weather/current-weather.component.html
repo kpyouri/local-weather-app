@@ -1,13 +1,14 @@
-<div>
+
+    <section class="weather__card" (click)="openDetails()" [ngClass]="{'weather__card-dark': darkMode}">
+    
+    <div>{{current.city}}, {{current.country}}</div>
+    <div>{{current.date | date: 'fullDate'}}</div>
   <div>
-    <span>{{current.city}}, {{current.country}}</span>
-    <span>{{current.date | date: 'fullDate'}}</span>
-</div>
-<div>
-  <img [src]='current.image'>
-  <span>{{current.temperature | number:'1.0-0'}}</span>
-</div>
-<div>
-  {{current.description}}
-</div>
-</div>
+    <img src="http://openweathermap.org/img/w/{{current.image}}.png" />
+    <span>{{current.temperature | number:'1.0-0'}}&#8457;</span>
+  </div>
+
+  <div>
+    {{current.description}}
+  </div>
+</section>
