@@ -3,10 +3,8 @@
     
 }
 
-.mat-toolbar {
-    text-align: center;
-}
 
-.app-curent-weather {
-    font-size: 30px;
+
+h1 {
+    color: white;
 }

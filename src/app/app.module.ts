@@ -8,6 +8,7 @@ import {WeatherService} from './weather/weather.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {RouterModule} from '@angular/router'
 import {MatToolbarModule, MatCardModule} from '@angular/material';
+import { NgMatSearchBarModule } from 'ng-mat-search-bar';
 
 
 @NgModule({
