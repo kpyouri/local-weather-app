@@ -3,6 +3,12 @@
 Weather Card Styling
 ====================
 */
+body {
+  background-color: linear-gradient(to top, #D28C9C - #765BE8);
+}
+
+
+
 .weather__card {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -14,12 +20,9 @@ Weather Card Styling
     cursor: pointer;
     background-color: white;
     border-radius: 1.75rem;
-    transition: 1000ms ease-in-out;
     animation: 1.25s ease-in-out 0ms 1 fadein;
   }
-  .weather__card:hover {
-    zoom: 1.2;
-  }
+ 
   
   .weather__card-dark {
     background: linear-gradient(to bottom, #711B86, #00057A);
