@@ -4,7 +4,17 @@ Weather Card Styling
 ====================
 */
 
+.city-country {
+  font-size: 25px;
+  color: white;
+  padding: 15px;
+}
 
+.date, .temperature, .weather-status {
+font-size: 20px;
+color: white;
+padding:-20px;
+}
 
 
 
