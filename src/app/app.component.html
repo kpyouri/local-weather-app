@@ -1,15 +1,21 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
 
-<!-- <<mat-toolbar>
-  <div class="searchbar" style="position: relative;">Today</div>
-</mat-toolbar>> -->
-
+<mat-toolbar>
+  <div class="search-bar">Today's Forecast</div>
+      <div class="form-component input--medium input--search">
+          <input type="text" placeholder="Search" /> 
+          <button type="submit" class="btn">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+ 
+</mat-toolbar>
 
 
 <div style="text-align:center">
   <h1>
-    Welcome to {{ title }}!
+   {{ title }}
   </h1>
 
     <app-current-weather></app-current-weather>

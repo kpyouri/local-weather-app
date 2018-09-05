@@ -8,6 +8,9 @@ import {WeatherService} from './weather/weather.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {RouterModule} from '@angular/router'
 import {MatToolbarModule, MatCardModule} from '@angular/material';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+
+
 
 
 
@@ -22,7 +25,8 @@ import {MatToolbarModule, MatCardModule} from '@angular/material';
     BrowserAnimationsModule,
     RouterModule,
     MatToolbarModule,
-    MatCardModule
+    MatCardModule,
+    AngularFontAwesomeModule
   ],
   providers: [WeatherService],
   bootstrap: [AppComponent]

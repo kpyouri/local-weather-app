@@ -5,7 +5,8 @@ import {environment} from '../../environments/environment';
 interface ICurrentWeatherData{
   weather: [{
     description: string,
-    icon: string
+    icon: string,
+    id: number
   }],
   main: {
     temp: number
