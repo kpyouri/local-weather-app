@@ -2,15 +2,16 @@
 
     <!-- <section class="weather__card" (click)="openDetails()" [ngClass]="{'weather__card-dark': darkMode}"> -->
   
-      
-    <div class="city-country">{{current.city}}, {{current.country}}</div>
-    <div class="date">{{current.date | date: 'fullDate'}}</div>
+     
+    <div *ngIf="current" class="city-country">{{current?.city}}, {{current?.country}}</div>
+    <div class="date">{{current?.date | date: 'fullDate'}}</div>
   <div img-icon>
     <img src="{{current.image}}" />
-    <span class="temperature">{{current.temperature | number:'1.0-0'}}&#8457;</span>
+    <span class="temperature">{{current?.temperature | number:'1.0-0'}}&#8457;</span>
   </div>
 
   <div class="weather-status">
-    {{current.description}}
+    {{current?.description}}
   </div>
+
 <!-- </section> -->
