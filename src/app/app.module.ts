@@ -9,6 +9,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {RouterModule} from '@angular/router'
 import {MatToolbarModule, MatCardModule} from '@angular/material';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { CitySearchComponent } from './city-search/city-search.component';
+import {MatFormFieldModule, MatInputModule} from '@angular/material';
 
 
 
@@ -17,7 +20,8 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 @NgModule({
   declarations: [
     AppComponent,
-    CurrentWeatherComponent
+    CurrentWeatherComponent,
+    CitySearchComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +30,17 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
     RouterModule,
     MatToolbarModule,
     MatCardModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    BrowserAnimationsModule
+  ],
+  exports: [
+    MatFormFieldModule,
+    MatInputModule,
+    BrowserAnimationsModule
   ],
   providers: [WeatherService],
   bootstrap: [AppComponent]
