@@ -1,7 +1,7 @@
-import { WeatherService } from './../weather/weather.service';
-import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { Component, OnInit , Output, EventEmitter} from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
 import {debounceTime} from 'rxjs/operators';
+import { getMatFormFieldMissingControlError } from '@angular/material';
 
 @Component({
   selector: 'app-city-search',
@@ -9,23 +9,32 @@ import {debounceTime} from 'rxjs/operators';
   styleUrls: ['./city-search.component.css']
 })
 export class CitySearchComponent implements OnInit {
-  search = new FormControl()
+  search = new FormControl('', [Validators.minLength(3)])
 
-  constructor(private weatherService: WeatherService) { }
+  @Output() searchEvent = new EventEmitter<string>();
+
+  constructor() { }
+
+
 
   ngOnInit() {
     this.search.valueChanges
+    .pipe(debounceTime(1000))
     .subscribe (
       (searchValue: string) => {
-        if (searchValue) {
-          const userInput = searchValue.split(',')
-          .map(s => s.trim());
-          this.weatherService.getCurrentWeather(userInput[0], userInput.length > 1 ? userInput[1] : undefined)
-          .pipe(debounceTime(1000))
-          .subscribe(data => console.log(data))
+        if (!this.search.invalid) {
+          this.searchEvent.emit(searchValue)
         }
+        
       }
     )
   }
 
+  getErrorMessage(){
+    return this.search.hasError('minlength') ? 'Type more than 3 characters to search.': '';
+  }
+
+
 }
+
+

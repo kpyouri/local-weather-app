@@ -7,7 +7,7 @@ import { CurrentWeatherComponent } from './current-weather/current-weather.compo
 import {WeatherService} from './weather/weather.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {RouterModule} from '@angular/router'
-import {MatToolbarModule, MatCardModule} from '@angular/material';
+import {MatToolbarModule, MatCardModule, MatButtonModule} from '@angular/material';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { CitySearchComponent } from './city-search/city-search.component';
@@ -35,12 +35,22 @@ import {MatFormFieldModule, MatInputModule} from '@angular/material';
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    MatButtonModule
   ],
   exports: [
     MatFormFieldModule,
     MatInputModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatCardModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule
+
   ],
   providers: [WeatherService],
   bootstrap: [AppComponent]

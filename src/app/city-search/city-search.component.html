@@ -10,7 +10,12 @@
 
               <input matInput placeholder="Enter city or zip" aria-label="City or Zip" [formControl]="search">
               <!-- <input type="text" placeholder="Search" />  -->
-              </mat-form-field>
+            
+              <mat-error *ngIf="search.invalid">
+                {{getErrorMessage()}}
+              </mat-error>
+            
+            </mat-form-field>
             </div>
      
     </mat-toolbar>
